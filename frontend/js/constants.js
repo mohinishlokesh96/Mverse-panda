@@ -1,10 +1,10 @@
 const contractAddress = "0x07f331392039e94d4fd26917308fbE3676f67BC3"; //Replace with your own contract address
 const chain = "rinkeby"; // rinkeby or polygon
 
-const welcome_h1 = "M-Verse NFT Project";
+const welcome_h1 = "Welcome to the CodeCats NFT Project!!";
 const welcome_h2 = "Connect to MetaMask to Get Started";
 const welcome_p =
-  "The M-Verse NFT Project is a decentralized project that aims to be an E-Commerce platform that allows users to own an NFT for a significant reward. The platform allows us to bring in a significant change in the way we look at online shopping and allow us to propel the futre. The future of shoppping is here.";
+  'The CodeCats NFT Project is a decentralized, open-source project that aims to demonstrate how to develope and launch your own NFT Collection. Follow step by step on the <a href="https://youtube.com/codestackr"  target="_blank" rel="noopener noreferrer">codeSTACKr</a> YouTube channel.';
 const h1_presale_coming_soon = "NFT Drop Coming Soon!!";
 const h1_presale_mint = "Pre-Sale Minting Open!!";
 const h1_public_mint = "Public Minting Open!!";
