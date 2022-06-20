@@ -7,7 +7,7 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "M-Verse Panda";
+const namePrefix = "MVerse Panda";
 const description =
   "Meet Pepper and his friends. Join them on an amazing adventure of fun and excitement.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
@@ -15,7 +15,7 @@ const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 100,
+    growEditionSizeTo: 50,
     layersOrder: [
       { name: "Background Color" },
       { name: "Panda Aura" },
@@ -52,12 +52,12 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = "rinkeby"; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = "M-Verse Panda";
+const CONTRACT_NAME = "MVerse Panda";
 const CONTRACT_SYMBOL = "MVP";
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = "0xC82c7eDaA574d5ce2BFa8d736e318c2c8501e5f1";
 const TREASURY_ADDRESS = "0xC82c7eDaA574d5ce2BFa8d736e318c2c8501e5f1";
-const MAX_SUPPLY = 100; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const MAX_SUPPLY = 50; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
 const MINT_PRICE = 0.001; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const TOKENS_PER_MINT = 5; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
