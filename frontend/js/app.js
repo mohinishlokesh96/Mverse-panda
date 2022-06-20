@@ -240,10 +240,10 @@ async function loadInfo() {
   const totalSupply = document.getElementById("totalSupply");
   const mintInput = document.getElementById("mintInput");
 
-  pricePerMint.innerText = `${price} ${priceType}`;
+  pricePerMint.innerText = `0.001 ${priceType}`;
   maxPerMint.innerText = `${info.deploymentConfig.tokensPerMint}`;
-  totalSupply.innerText = `${info.deploymentConfig.maxSupply}`;
-  mintInput.setAttribute("max", info.deploymentConfig.tokensPerMint);
+  totalSupply.innerText = `50`;
+  mintInput.setAttribute("max", 5);
 
   // MINT INPUT
   const mintIncrement = document.getElementById("mintIncrement");
@@ -304,7 +304,7 @@ function setTotalPrice() {
     priceType = "MATIC";
   }
   const price = web3.utils.fromWei(totalPriceWei.toString(), "ether");
-  totalPrice.innerText = `${price} ${priceType}`;
+  totalPrice.innerText = `.001 ${priceType}`;
   mintButton.disabled = false;
   mintInput.disabled = false;
 }
@@ -317,7 +317,7 @@ async function mint() {
   mintButton.innerHTML = spinner;
 
   const amount = parseInt(document.getElementById("mintInput").value);
-  const value = BigInt(info.deploymentConfig.mintPrice) * BigInt(amount);
+  const value = 0.001 * BigInt(amount);
   const publicMintActive = await contract.methods.mintingActive().call();
   const presaleMintActive = await contract.methods.presaleActive().call();
 
