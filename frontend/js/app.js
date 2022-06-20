@@ -294,7 +294,8 @@ function setTotalPrice() {
     mintInput.disabled = true;
     return;
   }
-  const totalPriceWei = BigInt(0.001) * BigInt(mintInputValue);
+  const totalPriceWei =
+    BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
 
   let priceType = "";
   if (chain === "rinkeby") {
@@ -303,7 +304,7 @@ function setTotalPrice() {
     priceType = "MATIC";
   }
   const price = web3.utils.fromWei(totalPriceWei.toString(), "ether");
-  totalPrice.innerText = `.001 ${priceType}`;
+  totalPrice.innerText = `0.001 ${priceType}`;
   mintButton.disabled = false;
   mintInput.disabled = false;
 }
@@ -316,7 +317,7 @@ async function mint() {
   mintButton.innerHTML = spinner;
 
   const amount = parseInt(document.getElementById("mintInput").value);
-  const value = BigInt("0.001") * BigInt(amount);
+  const value = BigInt(info.deploymentConfig.mintPrice) * BigInt(amount);
   const publicMintActive = await contract.methods.mintingActive().call();
   const presaleMintActive = await contract.methods.presaleActive().call();
 
