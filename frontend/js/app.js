@@ -294,8 +294,7 @@ function setTotalPrice() {
     mintInput.disabled = true;
     return;
   }
-  const totalPriceWei =
-    BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
+  const totalPriceWei = 0.001 * mintInputValue;
 
   let priceType = "";
   if (chain === "rinkeby") {
@@ -317,7 +316,7 @@ async function mint() {
   mintButton.innerHTML = spinner;
 
   const amount = parseInt(document.getElementById("mintInput").value);
-  const value = 0.001 * BigInt(amount);
+  const value = 0.001 * amount;
   const publicMintActive = await contract.methods.mintingActive().call();
   const presaleMintActive = await contract.methods.presaleActive().call();
 
